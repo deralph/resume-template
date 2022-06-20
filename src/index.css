@@ -1,13 +1,126 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background: #f1f5f8;
+  color: #222;
+}
+
+/* ogundelle anointing */
+
+#root{
+  margin: 0 auto;
+  width: 70%;
+  display: flex;
+  background: rgb(119, 119, 224);
+  padding: 20px;
+  color: #111;
+}
+.cont{
+  flex-basis: 35%;
+  padding: 10px 30px 0 10px;
+}
+.container{
+  flex-basis: 65%;
+}
+.name{
+  width: 100%;
+  text-align: center;
+  padding: 30px 0 20px;
+  position: relative;
+}
+.name h1{
+  font-size: 40px;
+}
+.name h1::after{
+  content: "";
+  display: block;
+  width: 30%;
+  height: 3px;
+  background: #222;
+  margin: 10px auto;
+}
+.name p{
+  font-size: 20px;
+  font-weight: 550;
+}
+.info{
+  display: flex;
+  justify-content: space-between;
+  margin: 5px;
+}
+.exper, .summary{
+margin-top: 30px;
+}
+.exper h2, .summary h2, .edu h2, .con h2, .skills h2,.lang h2, .hob h2{
+  padding: 10px;
+  margin-bottom: 5px;
+}
+.exper h2::after, .summary h2::after, .edu h2::after,
+.con h2::after,.skills h2::after,.hob h2::after,.lang h2::after{
+  content: "";
+  width: 140px;
+  height: 3px;
+  background: #222;
+  /* margin: 0 auto; */
+  display: block;
+}
+.summary h2::after{
+  width: 120px !important;
+}
+.pic img{
+  margin-top: 40px;
+  width: 250px;
+  height: 250px;
+  background: #222;
+  border-radius: 50%;
+  border: 3px solid #222;
+}
+.con{
+  margin-top: 30px;
+}
+.con h2::after{
+  width: 110px !important;
+}
+.con ul li{
+  list-style: none;
+}
+.line1{
+  width: 100%;
+  background: #222;
+  height: 10px;
+  border-radius: 5px;
+}
+.line2{
+  width: 100%;
+  background: linear-gradient(90deg,#222 90% , #bbb 10% );
+  height: 10px;
+  border-radius: 5px;
+}
+.line3{
+  width: 100%;
+  background: linear-gradient(90deg,#222 70%,#bbb 30% );
+  height: 10px;
+  border-radius: 5px;
+}
+.skills h2::after{
+  width: 80px !important;
+}
+.skills{
+  margin-top: 20px;
+}
+.skills p{
+  padding: 10px;
+}
+
+@media (max-width:800px) {
+  #root{
+    width: auto !important;
+    overflow: auto;
+  }
 }
